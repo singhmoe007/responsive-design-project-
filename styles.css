@@ -1,0 +1,341 @@
+body {
+    background-color: whitesmoke;
+}
+
+.navigaton {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    border-bottom: 1px solid white;
+    box-shadow: 0 0px 5px white;
+}
+
+.navigaton .nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navigaton .nav ul li {
+    list-style: none;
+    margin:0 0px 0 10px;
+    padding: 0;
+
+}
+
+.navigaton .nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.navigaton .nav ul li a:hover {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    font-weight: 600;
+}
+
+header {
+    margin-top: 60px;
+    height: 500px;
+    width: 100%;
+    background-image: url("./harry-swales-Vfvf3H-5OHc-unsplash.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template: repeat(10, 1fr) / repeat(10, 1fr) ;
+     
+}
+
+header .text {
+    grid-area: 4/ 4 / span 5 / span 4;
+    justify-self: center;
+    text-align: center;
+    color: lightpink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 2px white;
+}
+
+header .text h1 {
+    padding: 0;
+    margin: 5px;
+    font-size: 60px;
+}
+
+header .text span {
+    font-size: 30px;
+    margin: 0px;
+    text-transform: capitalize;
+}
+
+header .text span .join {
+    font-size: 25px;
+}
+
+@media only screen and (max-width : 768px ) {
+    header {
+        height: 250px;
+    }
+
+    header .text h1 {
+        padding: 0;
+        margin: 5px;
+        font-size: 45px;
+    }
+    
+    header .text span {
+        font-size: 20px;
+    }
+
+    .scroll embed{
+        width: 75px;
+      
+      }
+
+}
+
+@media only screen and (max-width : 480px ) {
+    header {
+        height: 250px;
+    }
+
+    header .text h1 {
+        padding: 0;
+        margin: 5px;
+        font-size: 38px;
+    }
+    
+    header .text span {
+        font-size: 15px;
+    }
+
+    .scroll embed{
+        max-width: 50px;
+      
+      }
+
+}
+
+.scroll embed{
+  max-width:100px;
+
+}
+
+.scroll {
+    grid-area: 10 / 5 / span 1 / span 2;
+    justify-self: center;
+    align-self: end;
+}
+
+#about {
+     
+    margin: 0 auto;
+    display: flex;
+    align-content: start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-flow: row;
+    background: pink;
+    height: 600px;
+}
+
+#about .image {
+    flex-grow: 1;
+    flex-shrink: 5;
+    background-image: url("./gordon-cowie-7sIc6Y5GjsQ-unsplash.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-shadow: 0 0 5px white;
+    flex-basis: 600px;
+}
+
+
+#about .text {
+    flex-basis: 35%;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-shadow: 0 0 1px black;
+    font-size: 15px;
+    text-align: justify;
+}
+
+#about .text h2 {
+    margin: 0;
+    text-decoration: underline;
+}    
+
+#about .image, #about .text {
+    margin: 20px 3%;
+}
+
+@media only screen and (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        height: unset;
+    }
+
+    #about .image  {
+        flex-basis: 300px;
+    }
+
+}
+
+
+#featured {
+    text-align: center;
+    background-color: rgba(0,0,0);
+    margin: 0 auto;
+}
+
+#featured h2 {
+    color: red;
+    padding-top: 10px;
+    margin-top:0;
+}
+
+#featured .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    justify-content: space-around;
+}
+
+#featured .container .image {
+    flex-basis: 25%;
+
+}
+
+#featured .container .image img {
+    max-width: 100%;
+    min-width: 250px;
+    box-shadow: 0 0 10px pink;
+}
+
+@media only screen and (max-width: 768px) {
+    #featured .container .image img {
+        min-width: 300px;
+    }
+
+    #featured .container h2 {
+        font-size: 20px;
+    }
+}
+
+
+#agenda {
+    text-align: start;
+    margin: 0 auto;
+    background-image: url("./lvou\ 086goi.jpg") ;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#agenda h2, #agenda p  {
+    margin-bottom: 0;
+}
+
+#agenda ul li {
+    list-style:  "🎤";
+}
+
+#agenda h2, #agenda p, #agenda ul li {
+    margin-left: 5px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0 1px 4px black;
+}
+
+#agenda p a {
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+     #agenda p {
+        display: none;
+     }
+
+     #agenda {
+        height: unset;
+     }
+     #agenda h2 {
+        font-size: 20px;
+     }
+
+     #agenda li {
+        font-size: 15px;
+     }
+}
+
+
+#signup {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:antiquewhite;
+    color: black;
+}
+
+#signup h2 {
+    color: black;
+    border-radius: 3px;
+}
+
+#signup .input {
+    width: 50%;
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+
+#signup .button {
+
+    border: 1px solid white;
+    margin: 10px;
+    box-shadow: 0px 2px 2px grey;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+#signup .button:hover {
+    background-color: black;
+    color: white
+}
+
+#signup .button:active {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 0px white;
+}
+
+@media only screen and (max-width : 768px) {
+    #signup .button {
+        width: 50%;
+    }
+}
+
+footer {
+    margin: 0px auto 0 auto;
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 0;
+}
+
+footer h3 {
+    margin: 5px;
+}
